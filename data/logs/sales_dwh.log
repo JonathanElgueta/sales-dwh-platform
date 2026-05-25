@@ -1,0 +1,1224 @@
+2026-05-24 15:19:26 | INFO | ===================================
+2026-05-24 15:19:26 | INFO | EXECUTING INCREMENTAL LOAD
+2026-05-24 15:19:26 | INFO | ===================================
+2026-05-24 15:19:26 | INFO | Loading metadata parquet...
+2026-05-24 15:19:27 | INFO | Metadata rows loaded: 41
+2026-05-24 15:19:27 | INFO | Searching ACTIVE period...
+2026-05-24 15:19:27 | INFO | ACTIVE period: 2026_05
+2026-05-24 15:19:27 | INFO | Archivo ACTIVE: data sell in total (2026_05).xlsx
+2026-05-24 15:19:27 | INFO | Raw file encontrado: C:\sales-dwh\data\raw\sales\data sell in total (2026_05).xlsx
+2026-05-24 15:19:27 | INFO | Year detectado: 2026
+2026-05-24 15:19:27 | INFO | Month detectado: 05
+2026-05-24 15:19:27 | INFO | ===================================
+2026-05-24 15:19:27 | INFO | REMOVING OLD PARTITION
+2026-05-24 15:19:27 | INFO | ===================================
+2026-05-24 15:19:27 | INFO | Partición eliminada: C:\sales-dwh\data\warehouse\facts\sales\year=2026\month=05
+2026-05-24 15:19:27 | INFO | ===================================
+2026-05-24 15:19:27 | INFO | READING XLSX
+2026-05-24 15:19:27 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | Rows leídas: 22333
+2026-05-24 15:19:29 | INFO | Columnas partición agregadas.
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | WRITING PARTITION
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | Partition creada: C:\sales-dwh\data\warehouse\facts\sales\year=2026\month=05\data.parquet
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | UPDATING METADATA
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | Metadata actualizada.
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:29 | INFO | INCREMENTAL LOAD COMPLETED
+2026-05-24 15:19:29 | INFO | ===================================
+2026-05-24 15:19:58 | INFO | ===================================
+2026-05-24 15:19:58 | INFO | EXECUTING INCREMENTAL LOAD
+2026-05-24 15:19:58 | INFO | ===================================
+2026-05-24 15:19:58 | INFO | Loading metadata parquet...
+2026-05-24 15:19:59 | INFO | Metadata rows loaded: 41
+2026-05-24 15:19:59 | INFO | Searching ACTIVE period...
+2026-05-24 15:19:59 | INFO | ACTIVE period: 2026_05
+2026-05-24 15:19:59 | INFO | Archivo ACTIVE: data sell in total (2026_05).xlsx
+2026-05-24 15:19:59 | INFO | Raw file encontrado: C:\sales-dwh\data\raw\sales\data sell in total (2026_05).xlsx
+2026-05-24 15:19:59 | INFO | Year detectado: 2026
+2026-05-24 15:19:59 | INFO | Month detectado: 05
+2026-05-24 15:19:59 | INFO | ===================================
+2026-05-24 15:19:59 | INFO | REMOVING OLD PARTITION
+2026-05-24 15:19:59 | INFO | ===================================
+2026-05-24 15:19:59 | INFO | Partición eliminada: C:\sales-dwh\data\warehouse\facts\sales\year=2026\month=05
+2026-05-24 15:19:59 | INFO | ===================================
+2026-05-24 15:19:59 | INFO | READING XLSX
+2026-05-24 15:19:59 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | Rows leídas: 22333
+2026-05-24 15:20:00 | INFO | Columnas partición agregadas.
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | WRITING PARTITION
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | Partition creada: C:\sales-dwh\data\warehouse\facts\sales\year=2026\month=05\data.parquet
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | UPDATING METADATA
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | Metadata actualizada.
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:20:00 | INFO | INCREMENTAL LOAD COMPLETED
+2026-05-24 15:20:00 | INFO | ===================================
+2026-05-24 15:36:16 | INFO | ===================================
+2026-05-24 15:36:16 | INFO | CONECTANDO A DUCKDB
+2026-05-24 15:36:16 | INFO | ===================================
+2026-05-24 15:36:16 | INFO | DuckDB path: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 15:36:16 | INFO | DuckDB connection successful.
+2026-05-24 15:36:16 | INFO | ===================================
+2026-05-24 15:36:16 | INFO | CREATING VIEW vw_sales_enriched
+2026-05-24 15:36:16 | INFO | ===================================
+2026-05-24 15:36:16 | INFO | Executing CREATE VIEW statement...
+2026-05-24 15:38:09 | INFO | ===================================
+2026-05-24 15:38:09 | INFO | CONECTANDO A DUCKDB
+2026-05-24 15:38:09 | INFO | ===================================
+2026-05-24 15:38:09 | INFO | DuckDB path: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 15:38:09 | INFO | DuckDB connection successful.
+2026-05-24 15:38:09 | INFO | ===================================
+2026-05-24 15:38:09 | INFO | CREATING VIEW vw_sales_enriched
+2026-05-24 15:38:09 | INFO | ===================================
+2026-05-24 15:38:09 | INFO | Executing CREATE VIEW statement...
+2026-05-24 16:07:55 | INFO | ===================================
+2026-05-24 16:07:55 | INFO | CONECTANDO A DUCKDB
+2026-05-24 16:07:55 | INFO | ===================================
+2026-05-24 16:07:55 | INFO | DuckDB path: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:07:56 | INFO | DuckDB connection successful.
+2026-05-24 16:07:56 | INFO | ===================================
+2026-05-24 16:07:56 | INFO | CREATING VIEW vw_sales_enriched
+2026-05-24 16:07:56 | INFO | ===================================
+2026-05-24 16:07:56 | INFO | Executing CREATE VIEW statement...
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:24 | INFO | CONECTANDO A DUCKDB
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:24 | INFO | DuckDB path: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:10:24 | INFO | DuckDB connection successful.
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:24 | INFO | CREATING VIEW vw_sales_enriched
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:24 | INFO | Executing CREATE VIEW statement...
+2026-05-24 16:10:24 | INFO | View creada correctamente.
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:24 | INFO | VALIDATING VIEW
+2026-05-24 16:10:24 | INFO | ===================================
+2026-05-24 16:10:25 | INFO | Total registros semantic layer: 7406100
+2026-05-24 16:10:25 | INFO | DuckDB connection closed.
+2026-05-24 16:10:25 | INFO | ===================================
+2026-05-24 16:10:25 | INFO | SEMANTIC LAYER CREATED
+2026-05-24 16:10:25 | INFO | ===================================
+2026-05-24 16:10:25 | INFO | Base DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | BUILDING ANALYTICAL MARTS
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:26:44 | INFO | DuckDB connection successful.
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | BUILDING MART: SALES MONTHLY
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Executing SALES MONTHLY query...
+2026-05-24 16:26:44 | INFO | Rows generated: 41
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | VALIDANDO MART: SALES MONTHLY
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Dimensiones: (41, 11)
+2026-05-24 16:26:44 | INFO | 
+Preview (5 rows):
+   year month   venta_total  venta_toneladas  ...  devolucion_toneladas  devolucion_unidades_equivalentes  devolucion_piezas  pct_devolucion
+0  2023    01  2.290374e+10          6521.75  ...                444.53                          861550.0          1506969.0            7.09
+1  2023    02  2.238027e+10          6158.85  ...                546.49                         1018672.0          1613617.0            8.47
+2  2023    03  2.767375e+10          7588.81  ...                595.77                         1152836.0          2077501.0            7.83
+3  2023    04  2.457465e+10          6689.22  ...                664.53                         1215797.0          1987418.0            9.00
+4  2023    05  2.567439e+10          6899.40  ...                679.55                         1227593.0          1861954.0            8.79
+
+[5 rows x 11 columns]
+2026-05-24 16:26:44 | INFO | 
+Nulos:
+year                                0
+month                               0
+venta_total                         0
+venta_toneladas                     0
+venta_unidades_equivalentes         0
+venta_piezas                        0
+devolucion_total                    0
+devolucion_toneladas                0
+devolucion_unidades_equivalentes    0
+devolucion_piezas                   0
+pct_devolucion                      0
+dtype: int64
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | EXPORTANDO MART: SALES MONTHLY
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_sales_monthly.parquet
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | BUILDING MART: BRAND PERFORMANCE
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Executing BRAND PERFORMANCE query...
+2026-05-24 16:26:44 | INFO | Rows generated: 22
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | VALIDANDO MART: BRAND PERFORMANCE
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Dimensiones: (22, 9)
+2026-05-24 16:26:44 | INFO | 
+Preview (10 rows):
+            marca   venta_total  venta_toneladas  venta_unidades_equivalentes  ...  devolucion_total  pct_devolucion  market_share_pct  ranking_venta
+0           Ideal  3.068894e+11        108491.45                  181452167.0  ...      3.074171e+10           10.02             30.45              1
+1        Marinela  1.378964e+11         20994.75                   88689466.0  ...      8.381064e+09            6.08             13.68              2
+2       Nutrabien  1.294239e+11         19098.50                   45809574.0  ...      5.760109e+09            4.45             12.84              3
+3           Fuchs  1.021644e+11         33028.14                   49935209.0  ...      1.158997e+10           11.34             10.14              4
+4          Barcel  7.924515e+10         10834.89                   45171699.0  ...      2.727563e+09            3.44              7.86              5
+5        Tia Rosa  5.639760e+10         15693.50                   26960234.0  ...      1.402304e+09            2.49              5.60              6
+6       Housebrot  4.737349e+10         18477.28                   32344174.0  ...      1.444910e+08            0.31              4.70              7
+7            Cena  3.848457e+10         18233.38                   28219341.0  ...      3.075930e+09            7.99              3.82              8
+8  Agua De Piedra  3.590280e+10          6662.40                   20552939.0  ...      5.189688e+09           14.45              3.56              9
+9   Lagos Del Sur  2.067602e+10          3626.35                   12074766.0  ...      1.493488e+09            7.22              2.05             10
+
+[10 rows x 9 columns]
+2026-05-24 16:26:44 | INFO | 
+Nulos:
+marca                          0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_venta                  0
+dtype: int64
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | EXPORTANDO MART: BRAND PERFORMANCE
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_brand_performance.parquet
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | BUILDING MART: SALES WEEKLY BIMBO
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Executing SALES WEEKLY BIMBO query...
+2026-05-24 16:26:44 | INFO | Rows generated: 175
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | VALIDANDO MART: SALES WEEKLY BIMBO
+2026-05-24 16:26:44 | INFO | ===================================
+2026-05-24 16:26:44 | INFO | Dimensiones: (175, 11)
+2026-05-24 16:26:45 | INFO | 
+Preview (15 rows):
+    year_semana_bimbo  semana_bimbo   venta_total  ...  devolucion_unidades_equivalentes  devolucion_piezas  pct_devolucion
+0                2022            52  1.656301e+09  ...                           77718.0           127796.0            8.65
+1                2023             1  5.681660e+09  ...                          233287.0           405060.0            7.64
+2                2023             2  5.604678e+09  ...                          192618.0           344363.0            6.54
+3                2023             3  5.566116e+09  ...                          182779.0           325802.0            6.23
+4                2023             4  5.154537e+09  ...                          209636.0           362169.0            7.71
+5                2023             5  5.144954e+09  ...                          226237.0           366783.0            8.36
+6                2023             6  5.574905e+09  ...                          250835.0           392038.0            8.42
+7                2023             7  5.813434e+09  ...                          275459.0           433127.0            8.76
+8                2023             8  6.122301e+09  ...                          275751.0           438005.0            8.22
+9                2023             9  6.737493e+09  ...                          265577.0           449194.0            7.36
+10               2023            10  6.195695e+09  ...                          246808.0           448436.0            7.49
+11               2023            11  6.134494e+09  ...                          260504.0           483779.0            8.01
+12               2023            12  5.655023e+09  ...                          248961.0           464340.0            8.32
+13               2023            13  6.031471e+09  ...                          262423.0           458853.0            8.07
+14               2023            14  5.379256e+09  ...                          268613.0           440490.0            9.08
+
+[15 rows x 11 columns]
+2026-05-24 16:26:45 | INFO | 
+Nulos:
+year_semana_bimbo                   0
+semana_bimbo                        0
+venta_total                         0
+venta_toneladas                     0
+venta_unidades_equivalentes         0
+venta_piezas                        0
+devolucion_total                    0
+devolucion_toneladas                0
+devolucion_unidades_equivalentes    0
+devolucion_piezas                   0
+pct_devolucion                      0
+dtype: int64
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | EXPORTANDO MART: SALES WEEKLY BIMBO
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_sales_weekly_bimbo.parquet
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | BUILDING MART: CATEGORY PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Executing CATEGORY PERFORMANCE query...
+2026-05-24 16:26:45 | INFO | Rows generated: 36
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | VALIDANDO MART: CATEGORY PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Dimensiones: (36, 9)
+2026-05-24 16:26:45 | INFO | 
+Preview (15 rows):
+                        categoria   venta_total  venta_toneladas  ...  pct_devolucion  market_share_pct  ranking_categoria
+0                        Pasteles  1.225273e+11         18882.96  ...            6.48             12.16                  1
+1                  Molde Especial  1.181723e+11         40601.39  ...           10.37             11.72                  2
+2                       Tortillas  1.029201e+11         28660.22  ...            2.62             10.21                  3
+3                    Molde Blanco  1.014286e+11         40946.56  ...            8.20             10.06                  4
+4                          Botana  8.102565e+10         11062.31  ...            3.76              8.04                  5
+5                      Pan Blanco  7.510938e+10         30344.42  ...            5.66              7.45                  6
+6                         Brownie  7.263955e+10          9884.53  ...            3.85              7.21                  7
+7                       Alfajores  4.012410e+10          6175.53  ...            6.62              3.98                  8
+8                  Dulce Familiar  3.929560e+10          7310.69  ...            7.66              3.90                  9
+9          Bolleria Hot Dog Hogar  3.663435e+10         14075.35  ...           11.72              3.63                 10
+10  Bolleria Hamburguesas Consumo  3.096060e+10         11508.75  ...            0.13              3.07                 11
+11                          Pizza  2.717345e+10         10739.10  ...           15.58              2.70                 12
+12    Bolleria Hamburguesas Hogar  2.623456e+10          8959.18  ...           17.42              2.60                 13
+13                  Galleta Dulce  2.281925e+10          3297.21  ...            2.39              2.26                 14
+14                Dulces Chilenos  1.659451e+10          2549.93  ...           13.67              1.65                 15
+
+[15 rows x 9 columns]
+2026-05-24 16:26:45 | INFO | 
+Nulos:
+categoria                      0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_categoria              0
+dtype: int64
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | EXPORTANDO MART: CATEGORY PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_category_performance.parquet
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | BUILDING MART: CHANNEL PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Executing CHANNEL PERFORMANCE query...
+2026-05-24 16:26:45 | INFO | Rows generated: 20
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | VALIDANDO MART: CHANNEL PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Dimensiones: (20, 11)
+2026-05-24 16:26:45 | INFO | 
+Preview (20 rows):
+                 canal            subcanal              cadena   venta_total  ...  devolucion_total  pct_devolucion  market_share_pct  ranking_canal
+0              DETALLE             DETALLE             DETALLE  4.504584e+11  ...      3.756122e+10            8.34             44.69              1
+1        AUTOSERVICIOS       AUTOSERVICIOS             WALMART  2.278989e+11  ...      1.503463e+10            6.60             22.61              2
+2        AUTOSERVICIOS       AUTOSERVICIOS            CENCOSUD  1.126896e+11  ...      6.205605e+09            5.51             11.18              3
+3        AUTOSERVICIOS       AUTOSERVICIOS                 SMU  6.580861e+10  ...      8.829873e+09           13.42              6.53              4
+4   CANALES ESPECIALES  CANALES ESPECIALES  CANALES ESPECIALES  3.277573e+10  ...      1.331780e+07            0.04              3.25              5
+5   CANALES ESPECIALES             MAYOREO             MAYOREO  2.835973e+10  ...      4.468455e+08            1.58              2.81              6
+6        AUTOSERVICIOS       AUTOSERVICIOS              TOTTUS  2.588830e+10  ...      3.458235e+09           13.36              2.57              7
+7        AUTOSERVICIOS       AUTOSERVICIOS          REGIONALES  2.167221e+10  ...      1.837558e+09            8.48              2.15              8
+8   CANALES ESPECIALES        CONVENIENCIA        CONVENIENCIA  1.495005e+10  ...      1.056836e+09            7.07              1.48              9
+9              DETALLE      DISTRIBUIDORES      DISTRIBUIDORES  8.278875e+09  ...     -1.783937e+06           -0.02              0.82             10
+10            FILIALES            FILIALES            FILIALES  6.784507e+09  ...      0.000000e+00            0.00              0.67             11
+11  CANALES ESPECIALES     TIENDAS PROPIAS     TIENDAS PROPIAS  4.816885e+09  ...      1.522179e+08            3.16              0.48             12
+12       AUTOSERVICIOS       AUTOSERVICIOS               IDEAL  4.272113e+09  ...      3.835197e+08            8.98              0.42             13
+13       AUTOSERVICIOS       AUTOSERVICIOS           ECOMMERCE  3.019701e+09  ...      7.261506e+06            0.24              0.30             14
+14  CANALES ESPECIALES           FAST FOOD           FAST FOOD  8.151515e+07  ...      4.690800e+04            0.06              0.01             15
+15  CANALES ESPECIALES           MAYORISTA           MAYORISTA  5.880741e+07  ...      1.063463e+06            1.81              0.01             16
+16  CANALES ESPECIALES              HORECA              HORECA  4.502330e+07  ...      0.000000e+00            0.00              0.00             17
+17       AUTOSERVICIOS        CONVENIENCIA        CONVENIENCIA  4.202200e+07  ...      1.401558e+06            3.34              0.00             18
+18       AUTOSERVICIOS       AUTOSERVICIOS               ideal  1.475377e+07  ...      7.789280e+05            5.28              0.00             19
+19  CANALES ESPECIALES     SIN IDENTIFICAR     SIN IDENTIFICAR  1.087218e+06  ...      0.000000e+00            0.00              0.00             20
+
+[20 rows x 11 columns]
+2026-05-24 16:26:45 | INFO | 
+Nulos:
+canal                          0
+subcanal                       0
+cadena                         0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_canal                  0
+dtype: int64
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | EXPORTANDO MART: CHANNEL PERFORMANCE
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_channel_performance.parquet
+2026-05-24 16:26:45 | INFO | Closing DuckDB connection...
+2026-05-24 16:26:45 | INFO | DuckDB connection closed.
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:26:45 | INFO | MART BUILD FINALIZADO
+2026-05-24 16:26:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | BUILDING ANALYTICAL MARTS
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:28:45 | INFO | DuckDB connection successful.
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | BUILDING MART: SALES MONTHLY
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | Executing SALES MONTHLY query...
+2026-05-24 16:28:45 | INFO | Rows generated: 41
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | VALIDANDO MART: SALES MONTHLY
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | Dimensiones: (41, 11)
+2026-05-24 16:28:45 | INFO | 
+Preview (5 rows):
+   year month   venta_total  ...  devolucion_unidades_equivalentes  devolucion_piezas  pct_devolucion
+0  2023    01  2.290374e+10  ...                          861550.0          1506969.0            7.09
+1  2023    02  2.238027e+10  ...                         1018672.0          1613617.0            8.47
+2  2023    03  2.767375e+10  ...                         1152836.0          2077501.0            7.83
+3  2023    04  2.457465e+10  ...                         1215797.0          1987418.0            9.00
+4  2023    05  2.567439e+10  ...                         1227593.0          1861954.0            8.79
+
+[5 rows x 11 columns]
+2026-05-24 16:28:45 | INFO | 
+Nulos:
+year                                0
+month                               0
+venta_total                         0
+venta_toneladas                     0
+venta_unidades_equivalentes         0
+venta_piezas                        0
+devolucion_total                    0
+devolucion_toneladas                0
+devolucion_unidades_equivalentes    0
+devolucion_piezas                   0
+pct_devolucion                      0
+dtype: int64
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | EXPORTANDO MART: SALES MONTHLY
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_sales_monthly.parquet
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | BUILDING MART: BRAND PERFORMANCE
+2026-05-24 16:28:45 | INFO | ===================================
+2026-05-24 16:28:45 | INFO | Executing BRAND PERFORMANCE query...
+2026-05-24 16:28:46 | INFO | Rows generated: 22
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | VALIDANDO MART: BRAND PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Dimensiones: (22, 9)
+2026-05-24 16:28:46 | INFO | 
+Preview (10 rows):
+            marca   venta_total  venta_toneladas  ...  pct_devolucion  market_share_pct  ranking_venta
+0           Ideal  3.068894e+11        108491.45  ...           10.02             30.45              1
+1        Marinela  1.378964e+11         20994.75  ...            6.08             13.68              2
+2       Nutrabien  1.294239e+11         19098.50  ...            4.45             12.84              3
+3           Fuchs  1.021644e+11         33028.14  ...           11.34             10.14              4
+4          Barcel  7.924515e+10         10834.89  ...            3.44              7.86              5
+5        Tia Rosa  5.639760e+10         15693.50  ...            2.49              5.60              6
+6       Housebrot  4.737349e+10         18477.28  ...            0.31              4.70              7
+7            Cena  3.848457e+10         18233.38  ...            7.99              3.82              8
+8  Agua De Piedra  3.590280e+10          6662.40  ...           14.45              3.56              9
+9   Lagos Del Sur  2.067602e+10          3626.35  ...            7.22              2.05             10
+
+[10 rows x 9 columns]
+2026-05-24 16:28:46 | INFO | 
+Nulos:
+marca                          0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_venta                  0
+dtype: int64
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | EXPORTANDO MART: BRAND PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_brand_performance.parquet
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | BUILDING MART: SALES WEEKLY BIMBO
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Executing SALES WEEKLY BIMBO query...
+2026-05-24 16:28:46 | INFO | Rows generated: 175
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | VALIDANDO MART: SALES WEEKLY BIMBO
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Dimensiones: (175, 11)
+2026-05-24 16:28:46 | INFO | 
+Preview (15 rows):
+    year_semana_bimbo  semana_bimbo   venta_total  ...  devolucion_unidades_equivalentes  devolucion_piezas  pct_devolucion
+0                2022            52  1.656301e+09  ...                           77718.0           127796.0            8.65
+1                2023             1  5.681660e+09  ...                          233287.0           405060.0            7.64
+2                2023             2  5.604678e+09  ...                          192618.0           344363.0            6.54
+3                2023             3  5.566116e+09  ...                          182779.0           325802.0            6.23
+4                2023             4  5.154537e+09  ...                          209636.0           362169.0            7.71
+5                2023             5  5.144954e+09  ...                          226237.0           366783.0            8.36
+6                2023             6  5.574905e+09  ...                          250835.0           392038.0            8.42
+7                2023             7  5.813434e+09  ...                          275459.0           433127.0            8.76
+8                2023             8  6.122301e+09  ...                          275751.0           438005.0            8.22
+9                2023             9  6.737493e+09  ...                          265577.0           449194.0            7.36
+10               2023            10  6.195695e+09  ...                          246808.0           448436.0            7.49
+11               2023            11  6.134494e+09  ...                          260504.0           483779.0            8.01
+12               2023            12  5.655023e+09  ...                          248961.0           464340.0            8.32
+13               2023            13  6.031471e+09  ...                          262423.0           458853.0            8.07
+14               2023            14  5.379256e+09  ...                          268613.0           440490.0            9.08
+
+[15 rows x 11 columns]
+2026-05-24 16:28:46 | INFO | 
+Nulos:
+year_semana_bimbo                   0
+semana_bimbo                        0
+venta_total                         0
+venta_toneladas                     0
+venta_unidades_equivalentes         0
+venta_piezas                        0
+devolucion_total                    0
+devolucion_toneladas                0
+devolucion_unidades_equivalentes    0
+devolucion_piezas                   0
+pct_devolucion                      0
+dtype: int64
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | EXPORTANDO MART: SALES WEEKLY BIMBO
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_sales_weekly_bimbo.parquet
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | BUILDING MART: CATEGORY PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Executing CATEGORY PERFORMANCE query...
+2026-05-24 16:28:46 | INFO | Rows generated: 36
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | VALIDANDO MART: CATEGORY PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Dimensiones: (36, 9)
+2026-05-24 16:28:46 | INFO | 
+Preview (15 rows):
+                        categoria   venta_total  venta_toneladas  ...  pct_devolucion  market_share_pct  ranking_categoria
+0                        Pasteles  1.225273e+11         18882.96  ...            6.48             12.16                  1
+1                  Molde Especial  1.181723e+11         40601.39  ...           10.37             11.72                  2
+2                       Tortillas  1.029201e+11         28660.22  ...            2.62             10.21                  3
+3                    Molde Blanco  1.014286e+11         40946.56  ...            8.20             10.06                  4
+4                          Botana  8.102565e+10         11062.31  ...            3.76              8.04                  5
+5                      Pan Blanco  7.510938e+10         30344.42  ...            5.66              7.45                  6
+6                         Brownie  7.263955e+10          9884.53  ...            3.85              7.21                  7
+7                       Alfajores  4.012410e+10          6175.53  ...            6.62              3.98                  8
+8                  Dulce Familiar  3.929560e+10          7310.69  ...            7.66              3.90                  9
+9          Bolleria Hot Dog Hogar  3.663435e+10         14075.35  ...           11.72              3.63                 10
+10  Bolleria Hamburguesas Consumo  3.096060e+10         11508.75  ...            0.13              3.07                 11
+11                          Pizza  2.717345e+10         10739.10  ...           15.58              2.70                 12
+12    Bolleria Hamburguesas Hogar  2.623456e+10          8959.18  ...           17.42              2.60                 13
+13                  Galleta Dulce  2.281925e+10          3297.21  ...            2.39              2.26                 14
+14                Dulces Chilenos  1.659451e+10          2549.93  ...           13.67              1.65                 15
+
+[15 rows x 9 columns]
+2026-05-24 16:28:46 | INFO | 
+Nulos:
+categoria                      0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_categoria              0
+dtype: int64
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | EXPORTANDO MART: CATEGORY PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_category_performance.parquet
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | BUILDING MART: CHANNEL PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Executing CHANNEL PERFORMANCE query...
+2026-05-24 16:28:46 | INFO | Rows generated: 20
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | VALIDANDO MART: CHANNEL PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Dimensiones: (20, 11)
+2026-05-24 16:28:46 | INFO | 
+Preview (20 rows):
+                 canal            subcanal              cadena  ...  pct_devolucion  market_share_pct  ranking_canal
+0              DETALLE             DETALLE             DETALLE  ...            8.34             44.69              1
+1        AUTOSERVICIOS       AUTOSERVICIOS             WALMART  ...            6.60             22.61              2
+2        AUTOSERVICIOS       AUTOSERVICIOS            CENCOSUD  ...            5.51             11.18              3
+3        AUTOSERVICIOS       AUTOSERVICIOS                 SMU  ...           13.42              6.53              4
+4   CANALES ESPECIALES  CANALES ESPECIALES  CANALES ESPECIALES  ...            0.04              3.25              5
+5   CANALES ESPECIALES             MAYOREO             MAYOREO  ...            1.58              2.81              6
+6        AUTOSERVICIOS       AUTOSERVICIOS              TOTTUS  ...           13.36              2.57              7
+7        AUTOSERVICIOS       AUTOSERVICIOS          REGIONALES  ...            8.48              2.15              8
+8   CANALES ESPECIALES        CONVENIENCIA        CONVENIENCIA  ...            7.07              1.48              9
+9              DETALLE      DISTRIBUIDORES      DISTRIBUIDORES  ...           -0.02              0.82             10
+10            FILIALES            FILIALES            FILIALES  ...            0.00              0.67             11
+11  CANALES ESPECIALES     TIENDAS PROPIAS     TIENDAS PROPIAS  ...            3.16              0.48             12
+12       AUTOSERVICIOS       AUTOSERVICIOS               IDEAL  ...            8.98              0.42             13
+13       AUTOSERVICIOS       AUTOSERVICIOS           ECOMMERCE  ...            0.24              0.30             14
+14  CANALES ESPECIALES           FAST FOOD           FAST FOOD  ...            0.06              0.01             15
+15  CANALES ESPECIALES           MAYORISTA           MAYORISTA  ...            1.81              0.01             16
+16  CANALES ESPECIALES              HORECA              HORECA  ...            0.00              0.00             17
+17       AUTOSERVICIOS        CONVENIENCIA        CONVENIENCIA  ...            3.34              0.00             18
+18       AUTOSERVICIOS       AUTOSERVICIOS               ideal  ...            5.28              0.00             19
+19  CANALES ESPECIALES     SIN IDENTIFICAR     SIN IDENTIFICAR  ...            0.00              0.00             20
+
+[20 rows x 11 columns]
+2026-05-24 16:28:46 | INFO | 
+Nulos:
+canal                          0
+subcanal                       0
+cadena                         0
+venta_total                    0
+venta_toneladas                0
+venta_unidades_equivalentes    0
+venta_piezas                   0
+devolucion_total               0
+pct_devolucion                 0
+market_share_pct               0
+ranking_canal                  0
+dtype: int64
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | EXPORTANDO MART: CHANNEL PERFORMANCE
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | Mart exportado correctamente: C:\sales-dwh\data\marts\mart_channel_performance.parquet
+2026-05-24 16:28:46 | INFO | Closing DuckDB connection...
+2026-05-24 16:28:46 | INFO | DuckDB connection closed.
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:28:46 | INFO | MART BUILD FINALIZADO
+2026-05-24 16:28:46 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | VALIDANDO VW_SALES_ENRICHED
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:41:37 | INFO | DuckDB connection successful.
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | 1. TOTAL REGISTROS
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | 
+   total_registros
+0          7406100
+2026-05-24 16:41:37 | INFO | Total registros semantic layer: 7406100
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:37 | INFO | 2. PRODUCTOS UNKNOWN
+2026-05-24 16:41:37 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 
+   registros_unknown  pct_unknown
+0               1266       0.0171
+2026-05-24 16:41:38 | WARNING | PRODUCTOS: porcentaje UNKNOWN bajo (0.0171%).
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 3. AGENCIAS UNKNOWN
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 
+   registros_unknown  pct_unknown
+0                  0          0.0
+2026-05-24 16:41:38 | INFO | AGENCIAS: sin registros UNKNOWN.
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 4. DUPLICADOS
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 
+   filas_originales  filas_unicas
+0           7406100       7406100
+2026-05-24 16:41:38 | INFO | Posibles duplicados detectados: 0
+2026-05-24 16:41:38 | INFO | No se detectaron duplicados.
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:38 | INFO | 5. NULOS
+2026-05-24 16:41:38 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 
+   fecha_null  producto_id_null  agencia_id_null  venta_null
+0         0.0               0.0              0.0         0.0
+2026-05-24 16:41:39 | INFO | No se detectaron NULLs críticos.
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 6. GRANULARIDAD
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 
+   productos  agencias  fechas  categorias  marcas
+0        632        31    1036          36      22
+2026-05-24 16:41:39 | INFO | Granularidad validada correctamente.
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 7. TOP UNKNOWN PRODUCTS
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 
+   Producto_ID                                   Producto  registros
+0         101S         Promociones Sin Impuesto (Salones)        271
+1          65S                 Sobrefacturación (Salones)        256
+2       964349   Cafe Marley Vaso Grande 1p 400ml VASO NP        162
+3       503649                Vaso Fruta 1p 180g Bolsa NP         74
+4       965329   Pan De Pascua Verde Falab 1p 700g CJA ID         65
+5       965273   Pan de Pascua FalabellaFC 1p 700g CJA ID         54
+6       964384        MixFrutas 1p 280g PCSnaServ VASO NP         45
+7       964373   Wrap Pollo Snack Service 1p 480g FLOW NP         44
+8       964386           ColacWrpPollo 1p 500g BLISTER NP         38
+9       964371         Wrap Mechada Queso 1p 480g FLOW NP         30
+10      964363   CibtinaMechadaQso DaiFrh 1p 120g FLOW NP         28
+11          9S                   Bonificaciones (Salones)         21
+12      973597                                          -         19
+13      964366   PstaCocktail AvPim DFrsh 1p 250g FLOW NP         17
+14      964365   PstaCockt AvMay DlyFresh 1p 250g FLOW NP         15
+15      964364    Cibtina Salam Qso DaFrh 1p 108g FLOW NP         14
+16      964361   Ciabattina AvPimenton DF 1p 100g FLOW NP         12
+17       10057                  Coca Coca Light 1.5Lt Fuc         12
+18      964382           Ensalada Apio 1p 120g BLISTER NP         12
+19      964362  Ciabattina JamQso  DaFrsh 1p 110g FLOW NP         10
+2026-05-24 16:41:39 | WARNING | Existen productos no homologados en dimensión.
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 8. VALIDACIÓN FINANCIERA
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | 
+    venta_total  devolucion_total  pct_devolucion
+0  1.007917e+12      7.498863e+10            7.44
+2026-05-24 16:41:39 | INFO | Pct devolución global: 7.44%
+2026-05-24 16:41:39 | INFO | Validación financiera OK.
+2026-05-24 16:41:39 | INFO | Closing DuckDB connection...
+2026-05-24 16:41:39 | INFO | DuckDB connection closed.
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:41:39 | INFO | VALIDACIÓN FINALIZADA
+2026-05-24 16:41:39 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | VALIDANDO VW_SALES_ENRICHED
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:43:08 | INFO | DuckDB connection successful.
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 1. TOTAL REGISTROS
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 
+   total_registros
+0          7406100
+2026-05-24 16:43:08 | INFO | Total registros semantic layer: 7406100
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 2. PRODUCTOS UNKNOWN
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 
+   registros_unknown  pct_unknown
+0               1266       0.0171
+2026-05-24 16:43:08 | WARNING | PRODUCTOS: porcentaje UNKNOWN bajo (0.0171%).
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 3. AGENCIAS UNKNOWN
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 
+   registros_unknown  pct_unknown
+0                  0          0.0
+2026-05-24 16:43:08 | INFO | AGENCIAS: sin registros UNKNOWN.
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:08 | INFO | 4. DUPLICADOS
+2026-05-24 16:43:08 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 
+   filas_originales  filas_unicas
+0           7406100       7406100
+2026-05-24 16:43:09 | INFO | Posibles duplicados detectados: 0
+2026-05-24 16:43:09 | INFO | No se detectaron duplicados.
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 5. NULOS
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 
+   fecha_null  producto_id_null  agencia_id_null  venta_null
+0         0.0               0.0              0.0         0.0
+2026-05-24 16:43:09 | INFO | No se detectaron NULLs críticos.
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 6. GRANULARIDAD
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 
+   productos  agencias  fechas  categorias  marcas
+0        632        31    1036          36      22
+2026-05-24 16:43:09 | INFO | Granularidad validada correctamente.
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 7. TOP UNKNOWN PRODUCTS
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 
+   Producto_ID                                   Producto  registros
+0         101S         Promociones Sin Impuesto (Salones)        271
+1          65S                 Sobrefacturación (Salones)        256
+2       964349   Cafe Marley Vaso Grande 1p 400ml VASO NP        162
+3       503649                Vaso Fruta 1p 180g Bolsa NP         74
+4       965329   Pan De Pascua Verde Falab 1p 700g CJA ID         65
+5       965273   Pan de Pascua FalabellaFC 1p 700g CJA ID         54
+6       964384        MixFrutas 1p 280g PCSnaServ VASO NP         45
+7       964373   Wrap Pollo Snack Service 1p 480g FLOW NP         44
+8       964386           ColacWrpPollo 1p 500g BLISTER NP         38
+9       964371         Wrap Mechada Queso 1p 480g FLOW NP         30
+10      964363   CibtinaMechadaQso DaiFrh 1p 120g FLOW NP         28
+11          9S                   Bonificaciones (Salones)         21
+12      973597                                          -         19
+13      964366   PstaCocktail AvPim DFrsh 1p 250g FLOW NP         17
+14      964365   PstaCockt AvMay DlyFresh 1p 250g FLOW NP         15
+15      964364    Cibtina Salam Qso DaFrh 1p 108g FLOW NP         14
+16      964361   Ciabattina AvPimenton DF 1p 100g FLOW NP         12
+17      964382           Ensalada Apio 1p 120g BLISTER NP         12
+18       10057                  Coca Coca Light 1.5Lt Fuc         12
+19      964362  Ciabattina JamQso  DaFrsh 1p 110g FLOW NP         10
+2026-05-24 16:43:09 | WARNING | Existen productos no homologados en dimensión.
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 8. VALIDACIÓN FINANCIERA
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | 
+    venta_total  devolucion_total  pct_devolucion
+0  1.007917e+12      7.498863e+10            7.44
+2026-05-24 16:43:09 | INFO | Pct devolución global: 7.44%
+2026-05-24 16:43:09 | INFO | Validación financiera OK.
+2026-05-24 16:43:09 | INFO | Closing DuckDB connection...
+2026-05-24 16:43:09 | INFO | DuckDB connection closed.
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:43:09 | INFO | VALIDACIÓN FINALIZADA
+2026-05-24 16:43:09 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | VALIDANDO DIM_DATE EN VISTA
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:59:20 | INFO | DuckDB connection successful.
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 1. NULOS CALENDARIO
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 
+   semana_bimbo_null  quarter_null  week_null
+0                0.0           0.0        0.0
+2026-05-24 16:59:20 | INFO | No se detectaron NULLs calendario.
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 2. VALIDAR SEMANA BIMBO
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 
+        Fecha   day_name  week  semana_bimbo
+0  2023-01-03    Tuesday     1            52
+1  2023-01-04  Wednesday     1            52
+2  2023-01-05   Thursday     1             1
+3  2023-01-06     Friday     1             1
+4  2023-01-07   Saturday     1             1
+5  2023-01-09     Monday     2             1
+6  2023-01-10    Tuesday     2             1
+7  2023-01-11  Wednesday     2             1
+8  2023-01-12   Thursday     2             2
+9  2023-01-13     Friday     2             2
+10 2023-01-14   Saturday     2             2
+2026-05-24 16:59:20 | INFO | Validación semana bimbo ejecutada.
+2026-05-24 16:59:20 | INFO | Se detectaron inicios de semana en jueves.
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 3. VENTAS SEMANA BIMBO
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 
+   year_semana_bimbo  semana_bimbo   venta_total
+0               2022            52  1.656301e+09
+1               2023             1  5.681660e+09
+2               2023             2  5.604678e+09
+3               2023             3  5.566116e+09
+4               2023             4  5.154537e+09
+5               2023             5  5.144954e+09
+6               2023             6  5.574905e+09
+7               2023             7  5.813434e+09
+8               2023             8  6.122301e+09
+9               2023             9  6.737493e+09
+2026-05-24 16:59:20 | INFO | Ventas semana bimbo validadas.
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:20 | INFO | 4. WEEKEND ANALYSIS
+2026-05-24 16:59:20 | INFO | ===================================
+2026-05-24 16:59:21 | INFO | 
+   is_weekend   venta_total  registros
+0       False  8.913293e+11    6446628
+1        True  1.165876e+11     959472
+2026-05-24 16:59:21 | INFO | Weekend analysis consistente.
+2026-05-24 16:59:21 | INFO | ===================================
+2026-05-24 16:59:21 | INFO | 5. QUARTER ANALYSIS
+2026-05-24 16:59:21 | INFO | ===================================
+2026-05-24 16:59:21 | INFO | 
+    year  quarter   venta_total
+0   2023        1  7.295776e+10
+1   2023        2  7.625458e+10
+2   2023        3  7.265730e+10
+3   2023        4  7.721279e+10
+4   2024        1  7.114162e+10
+5   2024        2  7.266370e+10
+6   2024        3  7.223001e+10
+7   2024        4  8.092768e+10
+8   2025        1  7.512482e+10
+9   2025        2  7.632140e+10
+10  2025        3  7.479066e+10
+11  2025        4  7.978407e+10
+12  2026        1  7.643426e+10
+13  2026        2  2.941627e+10
+2026-05-24 16:59:21 | INFO | Total year-quarter combinations: 14
+2026-05-24 16:59:21 | INFO | Quarter analysis validado.
+2026-05-24 16:59:21 | INFO | Closing DuckDB connection...
+2026-05-24 16:59:21 | INFO | DuckDB connection closed.
+2026-05-24 16:59:21 | INFO | ===================================
+2026-05-24 16:59:21 | INFO | VALIDACIÓN DIM_DATE FINALIZADA
+2026-05-24 16:59:21 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | VALIDANDO DIM_DATE EN VISTA
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | Conectando DuckDB: C:\sales-dwh\data\duckdb\sales_dwh.duckdb
+2026-05-24 16:59:27 | INFO | DuckDB connection successful.
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 1. NULOS CALENDARIO
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 
+   semana_bimbo_null  quarter_null  week_null
+0                0.0           0.0        0.0
+2026-05-24 16:59:27 | INFO | No se detectaron NULLs calendario.
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 2. VALIDAR SEMANA BIMBO
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 
+        Fecha   day_name  week  semana_bimbo
+0  2023-01-03    Tuesday     1            52
+1  2023-01-04  Wednesday     1            52
+2  2023-01-05   Thursday     1             1
+3  2023-01-06     Friday     1             1
+4  2023-01-07   Saturday     1             1
+5  2023-01-09     Monday     2             1
+6  2023-01-10    Tuesday     2             1
+7  2023-01-11  Wednesday     2             1
+8  2023-01-12   Thursday     2             2
+9  2023-01-13     Friday     2             2
+10 2023-01-14   Saturday     2             2
+2026-05-24 16:59:27 | INFO | Validación semana bimbo ejecutada.
+2026-05-24 16:59:27 | INFO | Se detectaron inicios de semana en jueves.
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 3. VENTAS SEMANA BIMBO
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 
+   year_semana_bimbo  semana_bimbo   venta_total
+0               2022            52  1.656301e+09
+1               2023             1  5.681660e+09
+2               2023             2  5.604678e+09
+3               2023             3  5.566116e+09
+4               2023             4  5.154537e+09
+5               2023             5  5.144954e+09
+6               2023             6  5.574905e+09
+7               2023             7  5.813434e+09
+8               2023             8  6.122301e+09
+9               2023             9  6.737493e+09
+2026-05-24 16:59:27 | INFO | Ventas semana bimbo validadas.
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 4. WEEKEND ANALYSIS
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 
+   is_weekend   venta_total  registros
+0        True  1.165876e+11     959472
+1       False  8.913293e+11    6446628
+2026-05-24 16:59:27 | INFO | Weekend analysis consistente.
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:27 | INFO | 5. QUARTER ANALYSIS
+2026-05-24 16:59:27 | INFO | ===================================
+2026-05-24 16:59:28 | INFO | 
+    year  quarter   venta_total
+0   2023        1  7.295776e+10
+1   2023        2  7.625458e+10
+2   2023        3  7.265730e+10
+3   2023        4  7.721279e+10
+4   2024        1  7.114162e+10
+5   2024        2  7.266370e+10
+6   2024        3  7.223001e+10
+7   2024        4  8.092768e+10
+8   2025        1  7.512482e+10
+9   2025        2  7.632140e+10
+10  2025        3  7.479066e+10
+11  2025        4  7.978407e+10
+12  2026        1  7.643426e+10
+13  2026        2  2.941627e+10
+2026-05-24 16:59:28 | INFO | Total year-quarter combinations: 14
+2026-05-24 16:59:28 | INFO | Quarter analysis validado.
+2026-05-24 16:59:28 | INFO | Closing DuckDB connection...
+2026-05-24 16:59:28 | INFO | DuckDB connection closed.
+2026-05-24 16:59:28 | INFO | ===================================
+2026-05-24 16:59:28 | INFO | VALIDACIÓN DIM_DATE FINALIZADA
+2026-05-24 16:59:28 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | VALIDATING METADATA
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | Loading metadata: C:\sales-dwh\data\metadata\processed_files.parquet
+2026-05-24 17:03:31 | INFO | Metadata rows loaded: 41
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 1. TOTAL FILES
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | Total archivos metadata: 41
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 2. ACTIVE FILE VALIDATION
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 
+                            file_name source   period  status  rows_processed               processed_at warehouse_partition  file_size_mb
+40  data sell in total (2026_05).xlsx  sales  2026_05  ACTIVE         22333.0 2026-05-24 15:20:00.571026             2026_05          1.88
+2026-05-24 17:03:31 | INFO | Cantidad ACTIVE detectados: 1
+2026-05-24 17:03:31 | INFO | OK: solo existe 1 ACTIVE
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 3. UNIQUE PERIODS
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | OK: períodos únicos
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 4. ACTIVE IS LATEST
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | Último período detectado: 2026_05
+2026-05-24 17:03:31 | INFO | ACTIVE período actual: 2026_05
+2026-05-24 17:03:31 | INFO | OK: ACTIVE correcto
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | 5. VALIDATE PERIOD CONTINUITY
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | OK: continuidad correcta
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | METADATA SUMMARY
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | Total períodos procesados: 41
+2026-05-24 17:03:31 | INFO | Primer período: 2023_01
+2026-05-24 17:03:31 | INFO | Último período: 2026_05
+2026-05-24 17:03:31 | INFO | ACTIVE actual: 2026_05
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:03:31 | INFO | METADATA VALIDATION SUCCESS
+2026-05-24 17:03:31 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | VALIDATING METADATA
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | Loading metadata: C:\sales-dwh\data\metadata\processed_files.parquet
+2026-05-24 17:04:36 | INFO | Metadata rows loaded: 41
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 1. TOTAL FILES
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | Total archivos metadata: 41
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 2. ACTIVE FILE VALIDATION
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 
+                            file_name source   period  ...               processed_at  warehouse_partition file_size_mb
+40  data sell in total (2026_05).xlsx  sales  2026_05  ... 2026-05-24 15:20:00.571026              2026_05         1.88
+
+[1 rows x 8 columns]
+2026-05-24 17:04:36 | INFO | Cantidad ACTIVE detectados: 1
+2026-05-24 17:04:36 | INFO | OK: solo existe 1 ACTIVE
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 3. UNIQUE PERIODS
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | OK: períodos únicos
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 4. ACTIVE IS LATEST
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | Último período detectado: 2026_05
+2026-05-24 17:04:36 | INFO | ACTIVE período actual: 2026_05
+2026-05-24 17:04:36 | INFO | OK: ACTIVE correcto
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | 5. VALIDATE PERIOD CONTINUITY
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | OK: continuidad correcta
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | METADATA SUMMARY
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | Total períodos procesados: 41
+2026-05-24 17:04:36 | INFO | Primer período: 2023_01
+2026-05-24 17:04:36 | INFO | Último período: 2026_05
+2026-05-24 17:04:36 | INFO | ACTIVE actual: 2026_05
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:04:36 | INFO | METADATA VALIDATION SUCCESS
+2026-05-24 17:04:36 | INFO | ===================================
+2026-05-24 17:08:23 | INFO | ===================================
+2026-05-24 17:08:23 | INFO | PLANNING INCREMENTAL LOAD
+2026-05-24 17:08:23 | INFO | ===================================
+2026-05-24 17:08:23 | INFO | Loading metadata: C:\sales-dwh\data\metadata\processed_files.parquet
+2026-05-24 17:08:24 | INFO | Metadata rows loaded: 41
+2026-05-24 17:08:24 | INFO | Metadata sorted by period.
+2026-05-24 17:08:24 | INFO | Latest detected period: 2026_05
+2026-05-24 17:08:24 | INFO | Building incremental execution plan...
+2026-05-24 17:08:24 | INFO | Period: 2023_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2023_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2024_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2025_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2026_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2026_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2026_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2026_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:08:24 | INFO | Period: 2026_05 | Status: ACTIVE | Action: REPROCESS
+2026-05-24 17:08:24 | INFO | Execution plan rows: 41
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | EXECUTION PLAN
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | 
+     period  status     action
+0   2023_01  CLOSED       SKIP
+1   2023_02  CLOSED       SKIP
+2   2023_03  CLOSED       SKIP
+3   2023_04  CLOSED       SKIP
+4   2023_05  CLOSED       SKIP
+5   2023_06  CLOSED       SKIP
+6   2023_07  CLOSED       SKIP
+7   2023_08  CLOSED       SKIP
+8   2023_09  CLOSED       SKIP
+9   2023_10  CLOSED       SKIP
+10  2023_11  CLOSED       SKIP
+11  2023_12  CLOSED       SKIP
+12  2024_01  CLOSED       SKIP
+13  2024_02  CLOSED       SKIP
+14  2024_03  CLOSED       SKIP
+15  2024_04  CLOSED       SKIP
+16  2024_05  CLOSED       SKIP
+17  2024_06  CLOSED       SKIP
+18  2024_07  CLOSED       SKIP
+19  2024_08  CLOSED       SKIP
+20  2024_09  CLOSED       SKIP
+21  2024_10  CLOSED       SKIP
+22  2024_11  CLOSED       SKIP
+23  2024_12  CLOSED       SKIP
+24  2025_01  CLOSED       SKIP
+25  2025_02  CLOSED       SKIP
+26  2025_03  CLOSED       SKIP
+27  2025_04  CLOSED       SKIP
+28  2025_05  CLOSED       SKIP
+29  2025_06  CLOSED       SKIP
+30  2025_07  CLOSED       SKIP
+31  2025_08  CLOSED       SKIP
+32  2025_09  CLOSED       SKIP
+33  2025_10  CLOSED       SKIP
+34  2025_11  CLOSED       SKIP
+35  2025_12  CLOSED       SKIP
+36  2026_01  CLOSED       SKIP
+37  2026_02  CLOSED       SKIP
+38  2026_03  CLOSED       SKIP
+39  2026_04  CLOSED       SKIP
+40  2026_05  ACTIVE  REPROCESS
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | SUMMARY
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | 
+      action  count
+0       SKIP     40
+1  REPROCESS      1
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | ANOMALY DETECTION
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | No existen períodos REVIEW.
+2026-05-24 17:08:24 | INFO | Cantidad REPROCESS correcta.
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | PLAN SUMMARY
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | Total períodos: 41
+2026-05-24 17:08:24 | INFO | Último período detectado: 2026_05
+2026-05-24 17:08:24 | INFO | REPROCESS count: 1
+2026-05-24 17:08:24 | INFO | REVIEW count: 0
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:08:24 | INFO | INCREMENTAL PLAN READY
+2026-05-24 17:08:24 | INFO | ===================================
+2026-05-24 17:09:00 | INFO | ===================================
+2026-05-24 17:09:00 | INFO | PLANNING INCREMENTAL LOAD
+2026-05-24 17:09:00 | INFO | ===================================
+2026-05-24 17:09:00 | INFO | Loading metadata: C:\sales-dwh\data\metadata\processed_files.parquet
+2026-05-24 17:09:01 | INFO | Metadata rows loaded: 41
+2026-05-24 17:09:01 | INFO | Metadata sorted by period.
+2026-05-24 17:09:01 | INFO | Latest detected period: 2026_05
+2026-05-24 17:09:01 | INFO | Building incremental execution plan...
+2026-05-24 17:09:01 | INFO | Period: 2023_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2023_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2024_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_05 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_06 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_07 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_08 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_09 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_10 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_11 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2025_12 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2026_01 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2026_02 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2026_03 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2026_04 | Status: CLOSED | Action: SKIP
+2026-05-24 17:09:01 | INFO | Period: 2026_05 | Status: ACTIVE | Action: REPROCESS
+2026-05-24 17:09:01 | INFO | Execution plan rows: 41
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | EXECUTION PLAN
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | 
+     period  status     action
+0   2023_01  CLOSED       SKIP
+1   2023_02  CLOSED       SKIP
+2   2023_03  CLOSED       SKIP
+3   2023_04  CLOSED       SKIP
+4   2023_05  CLOSED       SKIP
+5   2023_06  CLOSED       SKIP
+6   2023_07  CLOSED       SKIP
+7   2023_08  CLOSED       SKIP
+8   2023_09  CLOSED       SKIP
+9   2023_10  CLOSED       SKIP
+10  2023_11  CLOSED       SKIP
+11  2023_12  CLOSED       SKIP
+12  2024_01  CLOSED       SKIP
+13  2024_02  CLOSED       SKIP
+14  2024_03  CLOSED       SKIP
+15  2024_04  CLOSED       SKIP
+16  2024_05  CLOSED       SKIP
+17  2024_06  CLOSED       SKIP
+18  2024_07  CLOSED       SKIP
+19  2024_08  CLOSED       SKIP
+20  2024_09  CLOSED       SKIP
+21  2024_10  CLOSED       SKIP
+22  2024_11  CLOSED       SKIP
+23  2024_12  CLOSED       SKIP
+24  2025_01  CLOSED       SKIP
+25  2025_02  CLOSED       SKIP
+26  2025_03  CLOSED       SKIP
+27  2025_04  CLOSED       SKIP
+28  2025_05  CLOSED       SKIP
+29  2025_06  CLOSED       SKIP
+30  2025_07  CLOSED       SKIP
+31  2025_08  CLOSED       SKIP
+32  2025_09  CLOSED       SKIP
+33  2025_10  CLOSED       SKIP
+34  2025_11  CLOSED       SKIP
+35  2025_12  CLOSED       SKIP
+36  2026_01  CLOSED       SKIP
+37  2026_02  CLOSED       SKIP
+38  2026_03  CLOSED       SKIP
+39  2026_04  CLOSED       SKIP
+40  2026_05  ACTIVE  REPROCESS
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | SUMMARY
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | 
+      action  count
+0       SKIP     40
+1  REPROCESS      1
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | ANOMALY DETECTION
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | No existen períodos REVIEW.
+2026-05-24 17:09:01 | INFO | Cantidad REPROCESS correcta.
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | PLAN SUMMARY
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | Total períodos: 41
+2026-05-24 17:09:01 | INFO | Último período detectado: 2026_05
+2026-05-24 17:09:01 | INFO | REPROCESS count: 1
+2026-05-24 17:09:01 | INFO | REVIEW count: 0
+2026-05-24 17:09:01 | INFO | ===================================
+2026-05-24 17:09:01 | INFO | INCREMENTAL PLAN READY
+2026-05-24 17:09:01 | INFO | ===================================
