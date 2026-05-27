@@ -1,5 +1,36 @@
 import streamlit as st
+
+import pandas as pd
+
 import plotly.express as px
+
+from src.app.components.kpi_card import (
+
+    render_kpi_card
+
+)
+
+from src.app.components.section_header import (
+
+    render_section_header
+
+)
+
+from src.app.components.alerts import (
+
+    render_executive_alert,
+    render_info_alert,
+    render_warning_alert,
+    render_success_alert,
+    render_error_alert
+
+)
+
+from src.app.styles.theme import (
+
+    CHART_THEME
+
+)
 
 # ==================================================
 # HOME PAGE
@@ -8,7 +39,8 @@ import plotly.express as px
 def render_home(
 
     filtered_sales_df,
-    filtered_brand_df
+    filtered_brand_df,
+    daily_sales_df
 
 ):
 
@@ -17,16 +49,15 @@ def render_home(
     # ==================================================
 
     venta_total = int(
-        filtered_sales_df["venta_total"].sum()
-    )
 
-    pct_devolucion = round(
-        filtered_sales_df["pct_devolucion"].mean(),
-        2
+        filtered_sales_df["venta_total"].sum()
+
     )
 
     venta_promedio = int(
+
         filtered_sales_df["venta_total"].mean()
+
     )
 
     top_brand = (
@@ -46,19 +77,27 @@ def render_home(
     if len(filtered_sales_df) >= 2:
 
         current_sales = (
+
             filtered_sales_df.iloc[-1]["venta_total"]
+
         )
 
         previous_sales = (
+
             filtered_sales_df.iloc[-2]["venta_total"]
+
         )
 
         variacion_pct = round(
 
             (
+
                 (current_sales - previous_sales)
+
                 /
+
                 previous_sales
+
             ) * 100,
 
             2
@@ -70,164 +109,105 @@ def render_home(
         variacion_pct = 0
 
     # ==================================================
-    # KPI COLORS
+    # KPI ICON
     # ==================================================
 
     if variacion_pct >= 0:
 
-        variation_color = "#00FF99"
-
-        variation_icon = "▲"
+        variation_icon = "📈"
 
     else:
 
-        variation_color = "#FF4B4B"
-
-        variation_icon = "▼"
+        variation_icon = "📉"
 
     # ==================================================
-    # TITLE
+    # HEADER
     # ==================================================
 
-    st.markdown(
+    render_section_header(
 
-        """
-<div class='section-title'>
-🚀 SALES DWH PLATFORM
-</div>
-""",
+        "🚀 SALES DWH PLATFORM",
 
-        unsafe_allow_html=True
+        "Enterprise Analytics Platform"
 
     )
 
-    st.info(
+    render_info_alert(
+
         "Sistema analítico empresarial basado en Data Warehouse."
-    )
 
-    st.markdown("---")
+    )
 
     # ==================================================
     # KPI ROW
     # ==================================================
 
-    col1, col2, col3, col4 = st.columns(4)
-
-    # KPI 1
+    col1, col2, col3 = st.columns(3)
 
     with col1:
 
-        st.markdown(
+        render_kpi_card(
 
-            f"""
-<div class="kpi-card">
+            "Venta Total",
 
-<div class="kpi-title">
-Venta Total
-</div>
+            f"${venta_total:,.0f}",
 
-<div class="kpi-value">
-${venta_total:,.0f}
-</div>
-
-<div style="
-color:{variation_color};
-margin-top:10px;
-font-size:18px;
-font-weight:bold;
-">
-
-{variation_icon} {variacion_pct}%
-
-</div>
-
-</div>
-""",
-
-            unsafe_allow_html=True
+            f"{variation_icon} {variacion_pct}%"
 
         )
-
-    # KPI 2
 
     with col2:
 
-        st.markdown(
+        render_kpi_card(
 
-            f"""
-<div class="kpi-card">
+            "Venta Promedio",
 
-<div class="kpi-title">
-% Devolución
-</div>
-
-<div class="kpi-value">
-{pct_devolucion}%
-</div>
-
-</div>
-""",
-
-            unsafe_allow_html=True
+            f"${venta_promedio:,.0f}"
 
         )
-
-    # KPI 3
 
     with col3:
 
-        st.markdown(
+        render_kpi_card(
 
-            f"""
-<div class="kpi-card">
+            "Top Marca",
 
-<div class="kpi-title">
-Venta Promedio
-</div>
-
-<div class="kpi-value">
-${venta_promedio:,.0f}
-</div>
-
-</div>
-""",
-
-            unsafe_allow_html=True
+            top_brand
 
         )
 
-    # KPI 4
+    # ==================================================
+    # DATA FRESHNESS
+    # ==================================================
 
-    with col4:
+    daily_sales_df["fecha"] = pd.to_datetime(
 
-        st.markdown(
+        daily_sales_df["fecha"]
 
-            f"""
-<div class="kpi-card">
+    )
 
-<div class="kpi-title">
-Top Marca
-</div>
+    latest_date = daily_sales_df["fecha"].max()
 
-<div class="kpi-value">
-{top_brand}
-</div>
+    latest_date = latest_date.strftime(
 
-</div>
-""",
+        "%d-%m-%Y"
 
-            unsafe_allow_html=True
+    )
 
-        )
+    render_info_alert(
 
-    st.markdown("---")
+        f"📅 Data Venta Sell In actualizada hasta: {latest_date}"
+
+    )
 
     # ==================================================
     # EXECUTIVE SUMMARY
     # ==================================================
 
-    st.subheader(
+    render_section_header(
+
         "🧠 Executive Summary"
+
     )
 
     if variacion_pct >= 0:
@@ -235,7 +215,9 @@ Top Marca
         sales_message = (
 
             f"📈 Las ventas crecieron "
+
             f"{variacion_pct}% "
+
             f"vs período anterior."
 
         )
@@ -245,41 +227,29 @@ Top Marca
         sales_message = (
 
             f"📉 Las ventas cayeron "
+
             f"{abs(variacion_pct)}% "
+
             f"vs período anterior."
 
         )
 
-    if pct_devolucion >= 10:
-
-        devolucion_message = (
-            "🚨 Nivel de devoluciones ALTO."
-        )
-
-    elif pct_devolucion >= 5:
-
-        devolucion_message = (
-            "⚠️ Nivel de devoluciones moderado."
-        )
-
-    else:
-
-        devolucion_message = (
-            "✅ Devoluciones controladas."
-        )
-
     brand_message = (
+
         f"🏆 {top_brand} lidera actualmente las ventas."
+
     )
 
-    st.success(
+    render_executive_alert(
+
+        "Resumen Ejecutivo",
 
         f"""
+
 {sales_message}
 
-{devolucion_message}
-
 {brand_message}
+
 """
 
     )
@@ -288,10 +258,10 @@ Top Marca
     # SALES TREND
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📈 Tendencia Ventas Mensuales"
+
     )
 
     chart_df = filtered_sales_df.copy()
@@ -322,27 +292,26 @@ Top Marca
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # YOY COMPARISON
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📊 Comparativo Year over Year"
+
     )
 
     yoy_df = (
@@ -354,7 +323,6 @@ Top Marca
             "venta_total": "sum"
 
         })
-
         .sort_values("year")
 
     )
@@ -386,74 +354,27 @@ Top Marca
 
         fig.update_layout(
 
-            paper_bgcolor="#0E1117",
-
-            plot_bgcolor="#1C1F26",
-
-            font=dict(color="white")
+            **CHART_THEME
 
         )
 
         st.plotly_chart(
+
             fig,
+
             use_container_width=True
-        )
-
-        latest_growth = round(
-
-            yoy_df.iloc[-1]["growth_pct"],
-
-            2
 
         )
-
-        if latest_growth >= 0:
-
-            st.success(
-
-                f"""
-📈 Crecimiento YoY:
-
-{latest_growth}% vs año anterior.
-"""
-
-            )
-
-        else:
-
-            st.error(
-
-                f"""
-📉 Caída YoY:
-
-{abs(latest_growth)}% vs año anterior.
-"""
-
-            )
 
     # ==================================================
     # EXECUTIVE ALERTS
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🚨 Alertas Ejecutivas"
+
     )
-
-    alerts = []
-
-    if pct_devolucion >= 10:
-
-        alerts.append(
-            "🚨 Devoluciones críticas detectadas."
-        )
-
-    if variacion_pct < 0:
-
-        alerts.append(
-            "📉 Caída de ventas vs período anterior."
-        )
 
     top_market_share = round(
 
@@ -466,18 +387,16 @@ Top Marca
 
     if top_market_share >= 40:
 
-        alerts.append(
+        render_warning_alert(
+
             "🏆 Alta concentración de market share."
-        )
 
-    if len(alerts) == 0:
-
-        st.info(
-            "✅ No se detectaron alertas críticas."
         )
 
     else:
 
-        for alert in alerts:
+        render_info_alert(
 
-            st.warning(alert)
+            "✅ No se detectaron alertas críticas."
+
+        )

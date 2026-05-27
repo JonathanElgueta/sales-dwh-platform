@@ -1,5 +1,31 @@
 import streamlit as st
+
 import plotly.express as px
+
+from src.app.components.kpi_card import (
+
+    render_kpi_card
+
+)
+
+from src.app.components.section_header import (
+
+    render_section_header
+
+)
+
+from src.app.components.alerts import (
+
+    render_executive_alert,
+    render_success_alert
+
+)
+
+from src.app.styles.theme import (
+
+    CHART_THEME
+
+)
 
 # ==================================================
 # BRAND ANALYTICS
@@ -13,14 +39,16 @@ def render_brand_analytics(
 ):
 
     # ==================================================
-    # TITLE
+    # HEADER
     # ==================================================
 
-    st.title(
-        "📈 Analytics Marcas"
-    )
+    render_section_header(
 
-    st.markdown("---")
+        "📈 Analytics Marcas",
+
+        "Brand Performance Analytics"
+
+    )
 
     # ==================================================
     # SELECT BRAND
@@ -59,21 +87,31 @@ def render_brand_analytics(
     # ==================================================
 
     venta_total_brand = int(
+
         brand_analysis_df["venta_total"].sum()
+
     )
 
     devolucion_brand = round(
+
         brand_analysis_df["pct_devolucion"].mean(),
+
         2
+
     )
 
     market_share_brand = round(
+
         brand_analysis_df["market_share_pct"].mean(),
+
         2
+
     )
 
     ranking_brand = int(
+
         brand_analysis_df["ranking_venta"].mean()
+
     )
 
     # ==================================================
@@ -84,40 +122,52 @@ def render_brand_analytics(
 
     with col1:
 
-        st.metric(
+        render_kpi_card(
+
             "Venta Total",
+
             f"${venta_total_brand:,.0f}"
+
         )
 
     with col2:
 
-        st.metric(
+        render_kpi_card(
+
             "% Devolución",
+
             f"{devolucion_brand}%"
+
         )
 
     with col3:
 
-        st.metric(
+        render_kpi_card(
+
             "Market Share",
+
             f"{market_share_brand}%"
+
         )
 
     with col4:
 
-        st.metric(
+        render_kpi_card(
+
             "Ranking",
+
             f"#{ranking_brand}"
+
         )
 
     # ==================================================
     # SALES TREND
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📈 Evolución Mensual"
+
     )
 
     brand_chart_df = brand_analysis_df.copy()
@@ -148,27 +198,26 @@ def render_brand_analytics(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # MARKET SHARE TREND
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🥧 Evolución Market Share"
+
     )
 
     fig = px.area(
@@ -185,27 +234,26 @@ def render_brand_analytics(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # CATEGORY DRILLDOWN
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📦 Mix Categorías"
+
     )
 
     brand_category_df = (
@@ -217,12 +265,10 @@ def render_brand_analytics(
             "venta_total": "sum"
 
         })
-
         .sort_values(
             by="venta_total",
             ascending=False
         )
-
         .head(10)
 
     )
@@ -241,25 +287,26 @@ def render_brand_analytics(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # YOY BRAND
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📊 Comparativo YoY Marca"
+
     )
 
     yoy_brand_df = (
@@ -271,7 +318,6 @@ def render_brand_analytics(
             "venta_total": "sum"
 
         })
-
         .sort_values("year")
 
     )
@@ -303,40 +349,46 @@ def render_brand_analytics(
 
         fig.update_layout(
 
-            paper_bgcolor="#0E1117",
-
-            plot_bgcolor="#1C1F26",
-
-            font=dict(color="white")
+            **CHART_THEME
 
         )
 
         st.plotly_chart(
+
             fig,
+
             use_container_width=True
+
         )
 
     # ==================================================
     # INSIGHTS
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🧠 Insights Marca"
+
     )
 
     max_sales = int(
+
         brand_chart_df["venta_total"].max()
+
     )
 
     best_period = brand_chart_df.loc[
+
         brand_chart_df["venta_total"].idxmax()
+
     ]
 
-    st.success(
+    render_executive_alert(
+
+        "Brand Insights",
 
         f"""
+
 🚀 {selected_brand} alcanzó su mejor desempeño en:
 
 📅 {best_period['year']}-{best_period['month']}
@@ -346,6 +398,7 @@ ${max_sales:,.0f}
 
 🥧 Market Share promedio:
 {market_share_brand}%
+
 """
 
     )
@@ -354,10 +407,10 @@ ${max_sales:,.0f}
     # DETAIL TABLE
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📋 Detalle Marca"
+
     )
 
     st.dataframe(
@@ -367,3 +420,15 @@ ${max_sales:,.0f}
         use_container_width=True
 
     )
+
+    # ==================================================
+    # PERFORMANCE STATUS
+    # ==================================================
+
+    if market_share_brand >= 30:
+
+        render_success_alert(
+
+            "🏆 Marca con liderazgo sólido en market share."
+
+        )

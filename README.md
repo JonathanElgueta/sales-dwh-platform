@@ -1,103 +1,359 @@
 # 🚀 SALES DWH PLATFORM
 
-Enterprise Analytics Platform built with Python, DuckDB and Streamlit.
-
----
-
-# 📌 Overview
-
-Sales DWH Platform is a modern Business Intelligence and Data Warehouse solution implementing:
-
-- Incremental ETL Pipeline
-- Dimensional Modeling
-- Semantic Layer
-- Data Marts
-- Executive Dashboards
-- QA Layer
-- Visual Analytics
-- Modular Enterprise Architecture
-
----
-
-# 🏗️ Architecture
-
-```text
-RAW FILES
-    ↓
-ETL PIPELINE
-    ↓
-DATA WAREHOUSE
-    ↓
-SEMANTIC LAYER
-    ↓
-DATA MARTS
-    ↓
-ANALYTICS APPLICATION
-```
-
----
-
-# ⚙️ Tech Stack
-
-- Python
-- Pandas
-- DuckDB
-- Streamlit
-- Plotly
-- Parquet
-
----
-
-# 📊 Features
-
-## Backend
+Enterprise Analytics Platform powered by:
 
 - Incremental ETL
+- Partitioned Data Warehouse
 - Semantic Layer
-- Data Marts
-- QA Validations
-- DuckDB Warehouse
+- Analytics Data Marts
+- Streamlit Enterprise Dashboards
+- AI Analytics Foundation
 
 ---
 
-## Frontend
+# 📌 Current Version
 
-- Executive Dashboards
-- Drilldown Analytics
-- YoY Analytics
-- Heatmaps
-- Executive Alerts
-- KPI Monitoring
+| Version | Status | Description |
+|---|---|---|
+| V1 | CLOSED | Initial Analytics Prototype |
+| V2 | CLOSED | Enterprise Dashboard Expansion |
+| V3 | CLOSED | Semantic Layer + AI Foundation |
+| V4 | STABLE | Partitioned Enterprise Warehouse + Incremental Architecture |
 
 ---
 
-# 📚 Documentation
+# 🧠 Platform Overview
 
-## V3 Documentation
+Sales DWH Platform is an enterprise-grade analytics ecosystem designed to process, govern, enrich and visualize sales data through a modern multi-layer architecture.
 
-Full documentation available at:
+The platform evolved from a dashboard prototype into a fully desacoplada enterprise analytics architecture capable of:
+
+- Incremental XLSX ingestion
+- Historical persistence
+- Partitioned warehouse storage
+- Semantic business modeling
+- Analytics optimization
+- Operational governance
+- AI-ready analytics
+
+---
+
+# 🏗️ Official V4 Architecture
 
 ```text
-docs/v3/
+RAW XLSX FILES
+    ↓
+INCREMENTAL ETL PIPELINE
+    ↓
+PARTITIONED DATA WAREHOUSE
+    ↓
+DIMENSIONAL MODEL
+    ↓
+SEMANTIC LAYER (DuckDB Views)
+    ↓
+ANALYTICS DATA MARTS
+    ↓
+ENTERPRISE ANALYTICS APPLICATION
 ```
-
-Main documents:
-
-- README_V3.md
-- 01_ARCHITECTURE.md
-- 02_DATA_MODEL.md
-- 03_PIPELINE.md
-- 04_SEMANTIC_LAYER.md
-- 05_DATA_MARTS.md
-- 06_ANALYTICS_APP.md
-- 07_QA_LAYER.md
-- 08_ROADMAP_V4.md
 
 ---
 
-# 🚀 Run Project
+# ⚙️ Enterprise Architecture Principles
 
-## Create virtual environment
+## FACTS = RAW TRANSACTIONS
+
+Facts store only:
+
+- transactional data
+- daily granularity
+- operational metrics
+
+Facts NEVER contain:
+
+- joins
+- KPIs
+- business logic
+- dimensional enrichments
+
+---
+
+## DIMENSIONS = BUSINESS ATTRIBUTES
+
+Dimensions centralize:
+
+- product metadata
+- calendar intelligence
+- business hierarchies
+- enterprise attributes
+
+---
+
+## SEMANTIC LAYER = BUSINESS LOGIC
+
+The Semantic Layer centralizes:
+
+- joins
+- enrichments
+- enterprise semantics
+- analytical logic
+
+Main enterprise view:
+
+```sql
+vw_sales_enriched
+```
+
+---
+
+## MARTS = ANALYTICS OPTIMIZATION
+
+Marts are generated exclusively from:
+
+```text
+Semantic Layer
+```
+
+Marts NEVER consume raw facts directly.
+
+---
+
+## APP = VISUALIZATION & OPERATIONS
+
+The Streamlit application consumes only:
+
+```text
+Analytics Data Marts
+```
+
+---
+
+# 📂 Enterprise Project Structure
+
+```text
+sales-dwh/
+│
+├── data/
+│   │
+│   ├── raw/
+│   │   └── sales/
+│   │
+│   ├── warehouse/
+│   │   │
+│   │   ├── facts/
+│   │   │   └── sales/
+│   │   │       └── year=YYYY/month=MM/
+│   │   │
+│   │   └── dimensions/
+│   │       ├── products/
+│   │       ├── agencies/
+│   │       └── date/
+│   │
+│   ├── duckdb/
+│   │   └── sales_dwh.duckdb
+│   │
+│   ├── marts/
+│   │
+│   ├── metadata/
+│   │
+│   └── logs/
+│
+├── docs/
+│   ├── V1/
+│   ├── V2/
+│   ├── V3/
+│   └── V4/
+│
+├── src/
+│   ├── app/
+│   ├── config/
+│   └── services/
+│
+└── outputs/
+```
+
+---
+
+# 🏢 Enterprise Features
+
+## ✅ Incremental ETL
+
+Supports:
+
+- incremental XLSX ingestion
+- partition updates
+- historical persistence
+- automatic mart regeneration
+
+---
+
+## ✅ Partitioned Warehouse
+
+Official partition strategy:
+
+```text
+year=YYYY/month=MM
+```
+
+Example:
+
+```text
+data/warehouse/facts/sales/year=2026/month=05/data.parquet
+```
+
+---
+
+## ✅ Semantic Layer
+
+Enterprise semantic architecture based on:
+
+```text
+FACT SALES
+    +
+DIM PRODUCTO
+    +
+DIM AGENCIA
+    +
+DIM DATE
+    ↓
+VW_SALES_ENRICHED
+```
+
+---
+
+## ✅ Analytics Data Marts
+
+Current marts:
+
+| Mart | Purpose |
+|---|---|
+| mart_sales_monthly | Monthly analytics |
+| mart_brand_performance | Brand analytics |
+| mart_daily_sales | Daily freshness |
+
+---
+
+## ✅ Enterprise Governance
+
+Includes:
+
+- authentication
+- role-based access
+- audit logs
+- QA monitoring
+- pipeline monitoring
+
+---
+
+## ✅ Daily Granularity
+
+The platform now supports:
+
+- daily operational monitoring
+- real freshness tracking
+- transaction-level analytics
+
+---
+
+# 📊 Enterprise Modules
+
+| Module | Description |
+|---|---|
+| Home | Executive KPIs |
+| Executive Dashboard | Enterprise analytics |
+| Brand Analytics | Brand performance |
+| Pipeline Monitor | Incremental ETL execution |
+| QA Monitor | Data quality monitoring |
+| AI Forecasting | Forecasting foundation |
+| AI Anomaly Detection | Operational anomaly monitoring |
+
+---
+
+# 🧪 QA Layer
+
+The QA Engine validates:
+
+- required columns
+- null values
+- duplicate records
+- invalid dates
+- negative sales
+
+Pipeline rule:
+
+```text
+NO FILE ENTERS THE WAREHOUSE WITHOUT QA VALIDATION
+```
+
+---
+
+# 🔄 Incremental Enterprise Flow
+
+```text
+NEW XLSX FILE
+    ↓
+QA VALIDATION
+    ↓
+SCHEMA NORMALIZATION
+    ↓
+PARTITION UPDATE
+    ↓
+SEMANTIC REFRESH
+    ↓
+MART REGENERATION
+    ↓
+CACHE REFRESH
+    ↓
+DASHBOARD UPDATE
+```
+
+---
+
+# 🧠 Semantic Layer Architecture
+
+The semantic layer centralizes:
+
+- joins
+- business rules
+- enrichments
+- analytical structure
+
+Main enterprise view:
+
+```sql
+vw_sales_enriched
+```
+
+---
+
+# 📦 Historical Rebuild
+
+V4 successfully rebuilt:
+
+```text
+2023 → 2026 historical sales
+```
+
+With more than:
+
+```text
+7.5M rows
+```
+
+processed successfully.
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone Repository
+
+```bash
+git clone <repository>
+```
+
+---
+
+## 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -105,17 +361,23 @@ python -m venv venv
 
 ---
 
-## Activate environment
+## 3. Activate Environment
 
 ### Windows
 
 ```bash
-venv\\Scripts\\activate
+venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+source venv/bin/activate
 ```
 
 ---
 
-## Install dependencies
+## 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -123,15 +385,7 @@ pip install -r requirements.txt
 
 ---
 
-## Run pipeline
-
-```bash
-python -m src.pipeline.run_pipeline
-```
-
----
-
-## Run application
+## 5. Run Application
 
 ```bash
 streamlit run src/app/app.py
@@ -139,12 +393,94 @@ streamlit run src/app/app.py
 
 ---
 
-# ⭐ Current Version
+# 🔐 Default Users
 
-## V3.0.0 — Enterprise Analytics Platform
+| User | Password | Role |
+|---|---|---|
+| admin | admin123 | admin |
+| qa_user | qa123 | qa |
+| ejecutivo_user | exec123 | ejecutivo |
+| ops_user | ops123 | operaciones |
+
+---
+
+# 📚 Documentation
+
+Complete enterprise documentation available in:
+
+```text
+docs/V4/
+```
+
+Includes:
+
+- Architecture
+- Data Model
+- Pipeline
+- Semantic Layer
+- Data Marts
+- QA Layer
+- Governance
+- Incremental Architecture
+- V5 Roadmap
+
+---
+
+# 🛣️ V5 Roadmap
+
+Next evolution:
+
+```text
+AI-Driven Enterprise Analytics Platform
+```
+
+Future capabilities:
+
+- Semantic KPI Engine
+- Enterprise Orchestration
+- AI Forecasting
+- Advanced Anomaly Detection
+- Enterprise Alerting
+- Observability Layer
+- Semantic Governance
+- Predictive Analytics
+
+---
+
+# 🏁 Current Platform Status
+
+## SALES DWH PLATFORM V4
+
+```text
+STABLE
+```
+
+Architecture officially consolidated:
+
+```text
+RAW XLSX
+    ↓
+INCREMENTAL ETL
+    ↓
+PARTITIONED WAREHOUSE
+    ↓
+SEMANTIC LAYER
+    ↓
+DATA MARTS
+    ↓
+ENTERPRISE ANALYTICS APP
+```
 
 ---
 
 # 👨‍💻 Author
 
 Jonathan Elgueta Elgueta
+
+---
+
+# 📌 Final Status
+
+```text
+V4 OFFICIALLY CLOSED
+```

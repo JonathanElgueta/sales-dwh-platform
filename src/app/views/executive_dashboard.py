@@ -1,5 +1,24 @@
 import streamlit as st
+
 import plotly.express as px
+
+from src.app.components.section_header import (
+
+    render_section_header
+
+)
+
+from src.app.components.alerts import (
+
+    render_executive_alert
+
+)
+
+from src.app.styles.theme import (
+
+    CHART_THEME
+
+)
 
 # ==================================================
 # EXECUTIVE DASHBOARD
@@ -15,21 +34,25 @@ def render_executive_dashboard(
 ):
 
     # ==================================================
-    # TITLE
+    # HEADER
     # ==================================================
 
-    st.title(
-        "📊 Dashboard Ejecutivo"
-    )
+    render_section_header(
 
-    st.markdown("---")
+        "📊 Dashboard Ejecutivo",
+
+        "Executive Business Intelligence Overview"
+
+    )
 
     # ==================================================
     # TOP BRANDS
     # ==================================================
 
-    st.subheader(
+    render_section_header(
+
         "🏆 Top Marcas"
+
     )
 
     top_brands = (
@@ -42,12 +65,10 @@ def render_executive_dashboard(
             "market_share_pct": "mean"
 
         })
-
         .sort_values(
             by="venta_total",
             ascending=False
         )
-
         .head(10)
 
     )
@@ -68,27 +89,26 @@ def render_executive_dashboard(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # TOP CATEGORIES
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "📦 Top Categorías"
+
     )
 
     top_categories = (
@@ -100,12 +120,10 @@ def render_executive_dashboard(
             "venta_total": "sum"
 
         })
-
         .sort_values(
             by="venta_total",
             ascending=False
         )
-
         .head(10)
 
     )
@@ -126,27 +144,26 @@ def render_executive_dashboard(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # TOP CHANNELS
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🏪 Top Canales"
+
     )
 
     top_channels = (
@@ -158,12 +175,10 @@ def render_executive_dashboard(
             "venta_total": "sum"
 
         })
-
         .sort_values(
             by="venta_total",
             ascending=False
         )
-
         .head(10)
 
     )
@@ -184,27 +199,26 @@ def render_executive_dashboard(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # MARKET SHARE
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🥧 Market Share"
+
     )
 
     fig = px.pie(
@@ -223,25 +237,26 @@ def render_executive_dashboard(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # HEATMAP
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🔥 Heatmap Ventas"
+
     )
 
     heatmap_df = filtered_sales_df.copy()
@@ -272,47 +287,56 @@ def render_executive_dashboard(
 
     fig.update_layout(
 
-        paper_bgcolor="#0E1117",
-
-        plot_bgcolor="#1C1F26",
-
-        font=dict(color="white")
+        **CHART_THEME
 
     )
 
     st.plotly_chart(
+
         fig,
+
         use_container_width=True
+
     )
 
     # ==================================================
     # EXECUTIVE INSIGHTS
     # ==================================================
 
-    st.markdown("---")
+    render_section_header(
 
-    st.subheader(
         "🧠 Insights Ejecutivos"
+
     )
 
     top_brand_name = top_brands.iloc[0]["marca"]
 
     top_brand_share = round(
+
         top_brands.iloc[0]["market_share_pct"],
+
         2
+
     )
 
     top_category_name = (
+
         top_categories.iloc[0]["categoria"]
+
     )
 
     top_channel_name = (
+
         top_channels.iloc[0]["cadena"]
+
     )
 
-    st.success(
+    render_executive_alert(
+
+        "Executive Insights",
 
         f"""
+
 🚀 {top_brand_name} lidera el mercado con
 {top_brand_share}% de market share.
 
@@ -321,6 +345,7 @@ def render_executive_dashboard(
 
 🏪 El canal más fuerte es:
 {top_channel_name}
+
 """
 
     )
